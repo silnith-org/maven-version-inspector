@@ -8,6 +8,12 @@
 	<name>Maven Version Inspector</name>
 	<description>This provides runtime access to the versions of all Maven artifacts on the Java classpath.</description>
 	<inceptionYear>2015</inceptionYear>
+	<scm>
+		<url>https://github.com/silnith-org/maven-version-inspector</url>
+		<connection>scm:git:https://github.com/silnith-org/maven-version-inspector.git</connection>
+		<developerConnection>scm:git:https://github.com/silnith-org/maven-version-inspector.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 	<properties>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
