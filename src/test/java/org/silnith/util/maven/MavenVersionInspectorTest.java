@@ -17,14 +17,14 @@ import org.apache.maven.artifact.versioning.ArtifactVersion;
 import org.apache.maven.artifact.versioning.DefaultArtifactVersion;
 import org.junit.Test;
 
+
 public class MavenVersionInspectorTest {
     
     private final MavenVersionInspector mavenVersionInspector = new MavenVersionInspector();
     
     @Test
     public void testLoadVersions() throws IOException {
-        final Collection<Properties> versionProperties = mavenVersionInspector
-                .loadVersions();
+        final Collection<Properties> versionProperties = mavenVersionInspector.loadVersions();
         
         assertNotNull(versionProperties);
         assertFalse(versionProperties.isEmpty());
@@ -49,23 +49,22 @@ public class MavenVersionInspectorTest {
         properties.add(properties103);
         properties.add(properties098);
         
-        final SortedMap<String, SortedMap<String, SortedSet<ArtifactVersion>>> sortedVersions = mavenVersionInspector
-                .sortVersions(properties);
-        
+        final SortedMap<String, SortedMap<String, SortedSet<ArtifactVersion>>> sortedVersions =
+                mavenVersionInspector.sortVersions(properties);
+                
         assertNotNull(sortedVersions);
         
         final TreeSet<ArtifactVersion> mavenVersionInspectorVersions = new TreeSet<ArtifactVersion>();
-        mavenVersionInspectorVersions.add(new DefaultArtifactVersion(
-                "0.9.8-SNAPSHOT"));
+        mavenVersionInspectorVersions.add(new DefaultArtifactVersion("0.9.8-SNAPSHOT"));
         mavenVersionInspectorVersions.add(new DefaultArtifactVersion("1.0.2"));
-        mavenVersionInspectorVersions.add(new DefaultArtifactVersion(
-                "1.0.3-SNAPSHOT"));
+        mavenVersionInspectorVersions.add(new DefaultArtifactVersion("1.0.3-SNAPSHOT"));
         
-        final TreeMap<String, SortedSet<ArtifactVersion>> artifactVersionMap = new TreeMap<String, SortedSet<ArtifactVersion>>();
-        artifactVersionMap.put("maven-version-inspector",
-                mavenVersionInspectorVersions);
+        final TreeMap<String, SortedSet<ArtifactVersion>> artifactVersionMap =
+                new TreeMap<String, SortedSet<ArtifactVersion>>();
+        artifactVersionMap.put("maven-version-inspector", mavenVersionInspectorVersions);
         
-        final SortedMap<String, SortedMap<String, SortedSet<ArtifactVersion>>> expectedSortedVersions = new TreeMap<String, SortedMap<String, SortedSet<ArtifactVersion>>>();
+        final SortedMap<String, SortedMap<String, SortedSet<ArtifactVersion>>> expectedSortedVersions =
+                new TreeMap<String, SortedMap<String, SortedSet<ArtifactVersion>>>();
         expectedSortedVersions.put("org.silnith", artifactVersionMap);
         
         assertEquals(expectedSortedVersions, sortedVersions);
