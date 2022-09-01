@@ -61,7 +61,7 @@ jobs:
       - name: Resolve Dependencies
         run: mvn dependency:go-offline
       - name: Resolve PGP Keys
-        run: mvn pgpverify:go-offline -Dpgpverify.quiet=true
+        run: mvn pgpverify:go-offline -Dpgpverify.quiet=true -DremoteRepositories=github,github-parent-pom,github-pgp-keys-filler
       - name: Clean
         run: mvn clean
       - name: Verify
