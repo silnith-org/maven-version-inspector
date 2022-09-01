@@ -34,12 +34,12 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>4.3.26.RELEASE</version>
+			<version>5.3.22</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.maven</groupId>
 			<artifactId>maven-artifact</artifactId>
-			<version>3.6.3</version>
+			<version>3.8.6</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
