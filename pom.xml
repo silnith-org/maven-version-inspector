@@ -48,4 +48,11 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<repositories>
+		<repository>
+			<id>github-parent-pom</id>
+			<name>GitHub Packages Parent POM</name>
+			<url>https://maven.pkg.github.com/silnith-org/parent-pom</url>
+		</repository>
+	</repositories>
 </project>
